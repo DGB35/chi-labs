@@ -6,7 +6,6 @@ namespace l1
 	{
 	public:
 		Txt();
-
 		Txt(const Txt &);
 		Txt(Txt&&) noexcept;
 
@@ -19,7 +18,6 @@ namespace l1
 		void printText();
 
 		~Txt();
-
 	private:
 		char** text;
 		size_t stringCount;
