@@ -70,9 +70,7 @@ namespace l1
 			}
 
 			for (size_t i = 0; i < stringCount; ++i)
-			{
 				delete[] text[i];
-			}
 			delete[] text;
 
 			text = text_clone;
@@ -96,18 +94,14 @@ namespace l1
 	void Txt::printText()
 	{
 		for (int i = 0; i < stringCount; ++i)
-		{
 			std::cout << text[i] << '\n';
-		}
 	}
 
 
 	Txt::~Txt()
 	{
 		for (size_t i = 0; i < stringCount; ++i)
-		{
 			delete[] text[i];
-		}
 		delete[] text;
 	}
 
