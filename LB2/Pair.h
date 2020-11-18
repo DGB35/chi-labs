@@ -19,7 +19,7 @@ inline Pair<A, B>::Pair() : key(A()), value(B())
 }
 
 template<typename A, typename B>
-inline Pair<A, B>::Pair(const A& a, const B& b) : key(A()), value(B())
+inline Pair<A, B>::Pair(const A& a, const B& b) : Pair()
 {
 	key = a;
 	value = b;
