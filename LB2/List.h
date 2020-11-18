@@ -17,7 +17,7 @@ private:
 };
 
 template<typename T, size_t N>
-inline List<T, N>::List(): listSize { 0 }
+inline List<T, N>::List() : listSize { 0 }
 {
 }
 
