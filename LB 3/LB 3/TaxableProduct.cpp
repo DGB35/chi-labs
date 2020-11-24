@@ -43,5 +43,11 @@ namespace sict
 		else
 			return new TaxableProduct(_id, _price, taxStatus);
 	}
+	
+	std::ostream& operator<<(std::ostream& os, const IProduct& p)
+	{
+		p.display(os);
+		return os;
+	}
 }
 
