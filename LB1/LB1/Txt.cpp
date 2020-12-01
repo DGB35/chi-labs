@@ -1,5 +1,4 @@
 #include "Txt.h"
-
 #include <iostream>
 #include <fstream>
 
@@ -8,7 +7,6 @@ namespace l1
 	Txt::Txt() : text{ nullptr }, stringCount{ 0 }
 	{
 	}
-
 
 	Txt::Txt(const Txt& obj) : stringCount(obj.stringCount)
 	{
@@ -21,17 +19,14 @@ namespace l1
 		text = text_clone;
 	}
 
-
 	Txt::Txt(Txt&& obj) noexcept
 	{
 		std::swap(text, obj.text);
 		std::swap(stringCount, obj.stringCount);
 	}
 
-
 	Txt::Txt(const char* fileName) : Txt()
 	{
-
 		std::ifstream in(fileName);
 
 		if (!in.is_open())
@@ -57,7 +52,6 @@ namespace l1
 		delete[] temp;
 	}
 
-
 	Txt& l1::Txt::operator=(const Txt& obj)
 	{
 		if (this != &obj)
@@ -79,7 +73,6 @@ namespace l1
 		return *this;
 	}
 
-
 	Txt& Txt::operator=(Txt&& obj) noexcept
 	{
 		if (this != &obj)
@@ -90,13 +83,11 @@ namespace l1
 		return *this;
 	}
 
-
 	void Txt::printText()
 	{
 		for (int i = 0; i < stringCount; ++i)
 			std::cout << text[i] << '\n';
 	}
-
 
 	Txt::~Txt()
 	{
